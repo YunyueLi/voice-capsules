@@ -1,3 +1,10 @@
 .DS_Store
 HANDOVER.md
 _research-archive/
+
+# 语料原文：多为公版，但仓库托管在 GitHub（美国法域）。老舍等作者经 URAA 在美可能仍受保护，
+# 统一把原文/测试集/负样本留在本地，只提交各声部的 corpus-lock.md 清单（底本/来源/校验和/剔除项/留出集划分），
+# 保证可复现又不在美国托管仓库里再分发受限文本。
+voices/*/corpus/
+voices/*/judge/testset/
+voices/*/judge/negatives/
