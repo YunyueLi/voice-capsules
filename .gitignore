@@ -8,3 +8,7 @@ _research-archive/
 voices/*/corpus/
 voices/*/judge/testset/
 voices/*/judge/negatives/
+voices/_build_log.txt
+
+voices/_build_foreign_log.txt
+voices/_build_aozora_log.txt
