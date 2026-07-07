@@ -2,13 +2,6 @@
 HANDOVER.md
 _research-archive/
 
-# 语料原文：多为公版，但仓库托管在 GitHub（美国法域）。老舍等作者经 URAA 在美可能仍受保护，
-# 统一把原文/测试集/负样本留在本地，只提交各声部的 corpus-lock.md 清单（底本/来源/校验和/剔除项/留出集划分），
-# 保证可复现又不在美国托管仓库里再分发受限文本。
-voices/*/corpus/
-voices/*/judge/testset/
-voices/*/judge/negatives/
-voices/_build_log.txt
-
-voices/_build_foreign_log.txt
-voices/_build_aozora_log.txt
+# 原文语料：全部本地留，不进公开仓（多为公版，但仓库托管在 GitHub/美国、逐作品法域复杂，
+# 统一不在此再分发正文）。只提交「语料索引/」下的覆盖清单（作者/来源/文件数/字数）。
+原文/
