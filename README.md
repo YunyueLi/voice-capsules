@@ -4,7 +4,7 @@
 
 > **English**: Voice Capsules is an open methodology for distilling the great writers of world literature into callable, *evaluable* capability packages. Each "voice" (an author may have several) is reverse-engineered across seven layers — diction, narration, structure, character, worldview, reader contract, and knowledge/persona substrate — plus its **negative space** (what the author never does, the single biggest tell in AI pastiche). The core asset is not a generation prompt but a per-voice **discriminator** ("does this read like Lu Xun?" is a measurable question), which drives a generate → judge → attribute-the-gap → iterate bootstrap loop. Docs are currently in Chinese; the roster covers 424 candidate voices across Chinese classical/modern, English, continental European, Hispanic, Japanese and other literatures.
 
-**项目状态**：文档与方法论阶段（立项 2026-07-03），尚无代码。欢迎 issue 讨论名录、七层模型与判别器设计。License: [MIT](LICENSE)。
+**项目状态**：方法论文档 + 本地公版语料库；V0 判别器地基建设中（2026-07 开工前对抗审查后补地基）。欢迎 issue 讨论名录、七层模型与判别器设计。License: [MIT](LICENSE)。
 
 ## 文档地图
 
@@ -20,7 +20,7 @@
 
 - **声部（Voice）**：封装的基本单位。一个作家可拆多个声部（鲁迅·小说 / 鲁迅·杂文），一部无名氏经典自成声部（《水浒传》）。
 - **七层模型**：语言 → 叙事 → 结构 → 人物 → 世界观 → 读者契约 → 知识与人格底座；外加负空间（露馅清单）与演化轴两条贯穿轴。
-- **判别器是核心资产**：「像不像」是可评测问题。计量指纹 + LLM rubric + 人类盲测三层判别，既做验收，也做拒绝采样把输出推向分布尾部。
+- **判别器是核心资产**：判的是「**新生成/未见文本**像不像该作家」——不是「查这段真迹是谁写的」（后者搜索/RAG 即得、无需本项目）。它是服务于写作（生成/改写/点评）的**评测尺子 + 拒绝采样筛子**，不是文本溯源工具。计量指纹 + LLM rubric + 人类盲测三层判别，既做验收，也把输出推向分布尾部。
 - **承诺分层**：L1 文体指纹保真（可达）/ L2 写作方法论复用（价值假说，验收=决策规则命中率）/ L3 原创灵光（不承诺——严判别器在机制上会杀掉「恰当背叛惯例」的候选，L3 专用通道是未验证的开放问题）。
 
 ## 当前状态
