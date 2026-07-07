@@ -1,0 +1,6 @@
+# Voice Capsules 运行环境（V0）。装法：python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
+opencc-python-reimplemented   # 繁简转换（t2s）
+numpy
+scipy                          # 配对 bootstrap 置信区间
+scikit-learn                   # 计量层判别器（逻辑回归/线性 SVM）
+jieba                          # 中文分词（功能词/词级特征）
